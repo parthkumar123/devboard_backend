@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config({
-    path: path.join(__dirname, `/env/${process.env.NODE_ENV}.env`),
+  path: path.join(__dirname, `/env/${process.env.NODE_ENV}.env`),
 });
 
 // Connect to MongoDB
@@ -28,5 +28,6 @@ app.use('/auth/signup', signupRouter);
 // Start the server
 const port = process.env.PORT;
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+  // eslint-disable-next-line no-console
+  console.log(`Server is running on port ${port}`);
 });

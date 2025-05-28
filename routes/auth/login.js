@@ -1,12 +1,9 @@
 // Purpose: Handle all routes related to login.
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-const {
-    handleUserLogin,
-} = require("../../controllers/auth/login");
+const { handleUserLogin } = require('../../controllers/auth/login');
 
-router.route("/")
-    .post(handleUserLogin);
+router.route('/').post(handleUserLogin);
 
 module.exports = router;
